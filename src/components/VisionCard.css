@@ -1,0 +1,97 @@
+.vision-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1);
+
+  transition: transform 0.3s ease;
+  transition: filter 0.6s ease-out;
+}
+
+img:hover {
+  transform: scale(1.05);
+  filter: brightness(0.2);
+}
+
+.details {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+
+  opacity: 0;
+  transition: opacity 1.0s ease;
+}
+
+.title {
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  font-size: var(--primary-size);
+  font-weight: 600;
+  font-stretch: semi-condensed;
+  color: white;
+  pointer-events: none;
+}
+
+.description {
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1.0s ease-in;
+  transition-delay: 600ms;
+}
+
+.number {
+  position: absolute;
+  top: 10%;
+  bottom: 0;
+  left: 25%;
+  right: 0;
+  line-height: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 80vh;
+  font-style: oblique;
+  opacity: 0.15;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
+}
+
+.vision-card:hover .details {
+  opacity: 1;
+}
+
+.vision-card:hover .description {
+  opacity: 1;
+}
+
+.vision-card:hover .number {
+  opacity: 0.1;
+}
+
+/* tablet */
+@media screen and (max-width: 900px) {
+  .number {
+    left: 45%;
+    font-size: 60vh;
+  }
+}

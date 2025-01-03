@@ -1,0 +1,159 @@
+:root {
+  font-family: "Raleway", system-ui, sans-serif;
+
+  background-color: var(--background-color);
+
+  --primary-size: 2.5rem;
+  --secondary-size: 1.8rem;
+
+  --primary-color: #ffffff;
+  --secondary-color: #c3c3c3;
+  --background-color: #171f2d;
+
+  --breakpoint-tablet: 900px;
+  --breakpoint-mobile: 600px;
+}
+
+.background {
+  z-index: -1;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  filter: blur(4px);
+}
+
+.background-overlay {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.3) 60%,
+    rgba(0, 0, 0, 0.6) 70%,
+    var(--background-color) 100%
+  );
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-section {
+  height: 95svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+  padding-top: 0px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12rem;
+  color: var(--primary-color);
+  margin-top: 2.2rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  line-height: 4rem;
+}
+
+.title h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: var(--secondary-size);
+  color: var(--secondary-color);
+}
+
+.scroll-button {
+  background: transparent;
+  margin: 0px;
+  padding: 0px;
+  cursor: s-resize;
+  border: none;
+  outline: none;
+  min-width: 40px;
+  width: 20%;
+  max-width: 50vw;
+  aspect-ratio: 1;
+  font-size: 4rem;
+}
+
+.scroll-button:hover,
+.scroll-button:focus {
+  border: none;
+  outline: none;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 10px;
+  height: 100svh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+/* tablet */
+@media screen and (max-width: 900px) {
+  :root {
+    --primary-size: 2rem;
+    --secondary-size: 1.5rem;
+  }
+
+  .title h1 {
+    font-size: 8rem;
+    margin-top: 1.8rem;
+    margin-bottom: 2rem;
+    line-height: 3rem;
+  }
+
+  .vision-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    padding: 8px;
+  }
+
+  .scroll-button {
+    min-width: 30px;
+    font-size: 3rem;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 600px) {
+  :root {
+    --primary-size: 2rem;
+    --secondary-size: 1.5rem;
+  }
+
+  .title h1 {
+    font-size: 8rem;
+    margin-top: 1.8rem;
+    margin-bottom: 2rem;
+    line-height: 3rem;
+  }
+
+  .vision-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.8rem;
+    padding: 8px;
+  }
+
+  .scroll-button {
+    min-width: 30px;
+    font-size: 3rem;
+  }
+}
