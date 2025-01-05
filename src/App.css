@@ -107,7 +107,7 @@ section {
 }
 
 /* tablet */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   :root {
     --primary-size: 2rem;
     --secondary-size: 1.5rem;
@@ -124,6 +124,7 @@ section {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.8rem;
     padding: 8px;
+    height: auto;
   }
 
   .scroll-button {

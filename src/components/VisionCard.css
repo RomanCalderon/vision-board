@@ -70,6 +70,7 @@ img:hover {
   font-family: "Montserrat", sans-serif;
   font-size: 80vh;
   font-style: oblique;
+  text-align: right;
   opacity: 0.15;
   pointer-events: none;
   opacity: 0;
@@ -89,9 +90,13 @@ img:hover {
 }
 
 /* tablet */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
+  .vision-card {
+    height: 340px;
+  }
+  
   .number {
-    left: 45%;
+    left: 40%;
     font-size: 60vh;
   }
 }
